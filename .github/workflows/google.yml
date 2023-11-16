@@ -22,7 +22,7 @@ env:
   # GKE_CLUSTER: cluster-1    # TODO: update to cluster name
   # GKE_ZONE: us-central1-c   # TODO: update to cluster zone
   # DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
-  REPOSITORY: fractalslab # TODO: update to Artifact Registry docker repository
+  REPOSITORY: test # TODO: update to Artifact Registry docker repository
   IMAGE: static-site
 
 jobs:
@@ -75,14 +75,14 @@ jobs:
     - name: Build
       run: |-
         docker build \
-          --tag "us-central1-docker.pkg.dev/saifuls-playground/fractalslab/static-site:$GITHUB_SHA" \
+          --tag "us-central1-docker.pkg.dev/saifuls-playground/test/static-site:$GITHUB_SHA" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
           .
     # Push the Docker image to Google Artifact Registry
     - name: Publish
       run: |-
-        docker push "us-central1-docker.pkg.dev/saifuls-playground/fractalslab/static-site:$GITHUB_SHA"
+        docker push "us-central1-docker.pkg.dev/saifuls-playground/test/static-site:$GITHUB_SHA"
     # Set up kustomize
     # - name: Set up Kustomize
     #   run: |-
