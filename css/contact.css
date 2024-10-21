@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: #e8f0fe;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.sales-enquiries, .contact-form {
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.sales-enquiries h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.sales-enquiries ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sales-enquiries li {
+    padding: 5px 0;
+}
+
+.contact-form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0288d1;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0277bd;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sales-enquiries, .contact-form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .sales-enquiries, .contact-form {
+        width: 90%;
+    }
+
+    input, select, textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
